@@ -1,0 +1,66 @@
+{
+  "name": "@bva/gulp-shopify-upload-with-callbacks",
+  "version": "2.1.17",
+  "description": "A tool to watch and upload files to Shopify for use in theme editing",
+  "keywords": [
+    "gulp",
+    "shopify",
+    "shopify-upload",
+    "shopify-theme"
+  ],
+  "homepage": "https://github.com/tshamz/gulp-shopify-upload-with-callbacks",
+  "bugs": {
+    "url": "https://github.com/tshamz/gulp-shopify-upload-with-callbacks/issues"
+  },
+  "author": {
+    "name": "BVAccel",
+    "url": "http://bvaccel.com"
+  },
+  "contributors": [
+    {
+      "name": "Tyler Shambora",
+      "email": "tyler@bvaccel.com",
+      "url": "https://github.com/tshamz"
+    }
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tshamz/gulp-shopify-upload-with-callbacks.git"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "fancy-log": "^1.3.2",
+    "inquirer": "0.12.0",
+    "isbinaryfile": "2.0.0",
+    "path": "0.11.14",
+    "plugin-error": "^0.1.2",
+    "shopify-api": "0.2.2",
+    "through2": "0.6.3"
+  },
+  "devDependencies": {
+    "gulp": "3.8.10"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "tshamz",
+      "email": "tyler@bvaccel.com"
+    }
+  ],
+  "scripts": {},
+  "readme": "gulp-shopify-upload-with-callbacks\n===================\n\n## Introduction\n\n**gulp-shopify-upload-with-callbacks** is a [Gulpjs](https://github.com/gulpjs/gulp) plugin forked from https://github.com/mikenorthorp/gulp-shopify-upload and then augmented to allow for callbacks after a file has been uploaded.\n\nThat project was a port of a similar plugin using Grunt called [grunt-shopify](https://github.com/wilr/grunt-shopify), thank you to the author for making a great plugin for Shopify.",
+  "readmeFilename": "README.md",
+  "gitHead": "d83e7c595bb2486ab3cfb78b10c390de3b8b9cd5",
+  "_id": "gulp-shopify-upload-with-callbacks@2.0.3",
+  "_shasum": "2bb4b917f25d1e38c49feed14f23d4ab41731538",
+  "_from": "gulp-shopify-upload-with-callbacks@2.0.3"
+}
