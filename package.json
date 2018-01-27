@@ -1,5 +1,5 @@
 {
-  "name": "@bva/gulp-shopify-upload-with-callbacks",
+  "name": "gulp-shopify-upload-with-callbacks",
   "version": "2.2.1",
   "description": "A tool to watch and upload files to Shopify for use in theme editing",
   "keywords": [
