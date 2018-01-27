@@ -246,7 +246,7 @@ function gulpShopifyUpload(apiKey, password, host, themeid, options) {
   }
 
   var connectedToLogMessage = function (host, themeid, name) {
-    return chalk.gray('Connected to: ') + chalk.magenta(host) + chalk.gray(' theme id: ') + chalk.magenta(themeid) + chalk.gray(' theme name: ') + chalk.magenta(name);
+    return chalk.gray('Connected to: ') + chalk.magenta(`${host}?preview_theme_id=${themeid}`) + chalk.gray(' theme id: ') + chalk.magenta(themeid) + chalk.gray(' theme name: ') + chalk.magenta(name);
   };
 
   shopifyAPI.theme.list(function (err, obj) {
