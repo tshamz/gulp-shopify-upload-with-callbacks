@@ -1,13 +1,13 @@
 'use strict';
-var path         = require('path');
-var through      = require('through2');
-var inquirer     = require('inquirer');
-var ShopifyApi   = require('shopify-api');
-var isBinaryFile = require('isbinaryfile');
-
-var PluginError  = require('plugin-error');
-var chalk        = require('chalk');
-var log          = require('fancy-log');
+var path           = require('path');
+var through        = require('through2');
+var inquirer       = require('inquirer');
+var ShopifyApi     = require('shopify-api');
+var isBinaryFile   = require('isbinaryfile');
+var PluginError    = require('plugin-error');
+var chalk          = require('chalk');
+var chalkAnimation = require('chalk-animation');
+var log            = require('fancy-log');
 
 var shopify = {};
 var shopifyAPI;
@@ -284,7 +284,8 @@ function gulpShopifyUpload(apiKey, password, host, themeid, options) {
           return theme.id == themeid;
         });
         if (matchingTheme) {
-          log(connectedToLogMessage(host, themeid, matchingTheme.name));
+          // log(connectedToLogMessage(host, themeid, matchingTheme.name));
+          chalkAnimation.rainbow(`[00:00:00] Connected to: ${host}/?preview_theme_id=${themeid} theme name: ${matchingTheme.name}`);
         } else {
           throw new PluginError(PLUGIN_NAME, 'please make sure you\'re using a valid theme id');
         }
