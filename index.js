@@ -224,7 +224,7 @@ shopify.destroy = function (filepath, file, host, base, themeid, callback) {
  * @param {themeid} string - unique id upload to the Shopify theme
  * @param {options} object - named array of custom overrides.
  */
-function gulpShopifyUpload(apiKey, password, host, themeid, options) {
+function gulpShopifyUpload(rainbow, apiKey, password, host, themeid, options) {
 
   // Set up the API
   shopify._setOptions(options);
@@ -284,8 +284,11 @@ function gulpShopifyUpload(apiKey, password, host, themeid, options) {
           return theme.id == themeid;
         });
         if (matchingTheme) {
-          // log(connectedToLogMessage(host, themeid, matchingTheme.name));
-          chalkAnimation.rainbow(`[00:00:00] Connected to: ${host}/?preview_theme_id=${themeid} theme name: ${matchingTheme.name}`);
+          if (rainbow) {
+            chalkAnimation.rainbow(`[00:00:00] Connected to: ${host}/?preview_theme_id=${themeid} theme name: ${matchingTheme.name}`);
+          } else {
+            log(connectedToLogMessage(host, themeid, matchingTheme.name));
+          }
         } else {
           throw new PluginError(PLUGIN_NAME, 'please make sure you\'re using a valid theme id');
         }
