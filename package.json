@@ -1,6 +1,6 @@
 {
   "name": "gulp-shopify-upload-with-callbacks",
-  "version": "2.2.5",
+  "version": "2.3.0",
   "description": "A tool to watch and upload files to Shopify for use in theme editing",
   "keywords": [
     "gulp",
