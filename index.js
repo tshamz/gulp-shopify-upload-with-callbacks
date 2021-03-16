@@ -304,9 +304,11 @@ function gulpShopifyUpload(apiKey, password, host, themeid, options) {
       callback(null, file);
     } else {
       if (file.isBuffer()) {
-        shopify.upload(file.path, file, host, '', themeid, function () {
+        var upload_callback = function () {
           callback(null, file);
-        });
+        };
+
+        setTimeout(shopify.upload.bind(null, file.path, file, host, '', themeid, upload_callback), 300);
       }
 
       // file is null if it was just deleted, so destroy it on Shopify
